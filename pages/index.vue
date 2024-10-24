@@ -17,7 +17,7 @@ const { moviesList, fetchMovies } = useMovies();
 fetchMovies();
 
 definePageMeta({
-  layouts: "/",
+  layouts: "/nuxt-github-pages/",
 });
 
 const { getMoviesList } = useMovies();

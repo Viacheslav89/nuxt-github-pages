@@ -6,7 +6,7 @@
   
   <script setup lang="ts">
   definePageMeta({
-    layouts: "/",
+    layouts: "/nuxt-github-pages/",
   });
   
   </script>
