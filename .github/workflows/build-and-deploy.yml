@@ -2,7 +2,7 @@ name: Build and Deploy
 on: 
   push:
     branches:
- - main
+      - main
 permissions:
   contents: write
 jobs:
@@ -13,22 +13,22 @@ jobs:
       matrix:
         node-version: [18]
     steps:
- - name: Checkout 🛎️
+    - name: Checkout 🛎️
       uses: actions/checkout@v3
 
- - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
 
- - name: Install & Generate 🔧
+    - name: Install & Generate 🔧
       run: |
- npm ci
- npm run generate
+        npm ci
+        npm run generate
       env:
-        NUXT_APP_BASE_URL: ${{ vars.NUXT_APP_BASE_URL }}
+        NUXT_APP_BASE_URL: ${{ vars.NUXT_APP_BASE_URL  }}
 
- - name: Deploy 🚀
+    - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: dist
