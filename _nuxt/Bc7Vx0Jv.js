@@ -1,1 +1,0 @@
-import{d as a,o as t,a as o,e as s,m as n,_ as d}from"./BgTGW1Ot.js";const l=a({__name:"default",setup(r){return(e,_)=>(t(),o("div",null,[s("div",null,[n(e.$slots,"default",{},void 0)])]))}}),f=d(l,[["__scopeId","data-v-ff6bb835"]]);export{f as default};
